@@ -1,0 +1,41 @@
+body {
+    background-color: bisque;
+  }
+  #hero {
+   background-image: url("../assets/libro.jpg");
+    background-size: cover;
+    position: center bottom;
+    background-repeat: no-repeat;
+    filter: sepia(50%);
+    color: rgb(53, 48, 40);
+  }
+  #form {
+    width: 500px;
+    background: rgba(255, 246, 205, 0.48);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 246, 205, 0.3);
+    
+    
+  }
+  #card {
+    width: 17rem;
+    padding: 10px;
+    margin: 9px;
+    background-color: rgb(204, 191, 169);
+    color: rgb(53, 48, 40);
+  }
+  #author {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  #infoButton {
+    margin-top: 5px;
+  }
+  #infoDiv {
+    font-size: 20px;
+    display: none;
+  }
+  
