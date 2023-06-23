@@ -44,14 +44,10 @@ const getData = async () => {
       }
     }
     //get res.data
-   
-    
-   
+
     if (res.data) {
-      
       if (res.data.works) {
-       var books = res.data.works;
-       
+        var books = res.data.works;
       } else {
         alert("no books");
         return;
@@ -60,7 +56,6 @@ const getData = async () => {
       alert("no data");
       return;
     }
-    
 
     for (let book of books) {
       //div and card
