@@ -43,19 +43,17 @@ const getData = async () => {
         return;
       }
     }
+    var books = res.data.works;
     //get res.data
-
-    if (res.data) {
-      if (res.data.works) {
-        var books = res.data.works;
-      } else {
-        alert("no books");
-        return;
-      }
+    //if 200!!!....
+    if (res.status == 200) {
+      res.data.work_count === 0 ? alert("Subject not found") : books;
     } else {
-      alert("no data");
+      alert("Ops! something went wrong");
       return;
     }
+
+    
 
     for (let book of books) {
       //div and card
@@ -99,7 +97,13 @@ const getData = async () => {
 
           let description = response.data.description;
 
-          let infoDiv = createElementHtml("div", "infoDiv", description);
+          let infoDiv = createElementHtml(
+            "div",
+            "infoDiv",
+            description === undefined
+              ? "description not found"
+              : description.value || description
+          );
           card.appendChild(infoDiv);
 
           //function click for infobutton
