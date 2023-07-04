@@ -1,6 +1,7 @@
 import axios from "axios";
 //function create element
 import createElementHtml from "./createElementHtml";
+//import getInfo from './getInfo'
 
 let list = document.getElementById("results");
 
@@ -111,11 +112,9 @@ const getData = async () => {
         } catch (error) {
           console.log(error);
         }
-      } 
+      }
       getInfo();
     }
-   
-    //}
 
     return;
   } catch (error) {
