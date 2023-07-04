@@ -46,6 +46,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //function create element
 
 
+//import getInfo from './getInfo'
+
 var list = document.getElementById("results");
 
 //get API
@@ -151,32 +153,32 @@ var getData = /*#__PURE__*/function () {
               card.appendChild(infoButton);
               //fetch info
 
-              /*async function getInfo() {
-                try {
-                  const response = await axios.get(
-                    `https://openlibrary.org${book.key}.json`
-                  );
-                    let description = response.data.description;
-                    let infoDiv = createElementHtml(
-                    "div",
-                    "infoDiv",
-                    description === undefined
-                      ? "description not found"
-                      : description.value || description
-                  );
-                  card.appendChild(infoDiv);
-                    //function click for infobutton
-                  infoButton.addEventListener("click", function () {
-                    infoDiv.style.display =
-                      window.getComputedStyle(infoDiv).display == "none"
-                        ? "block"
-                        : "none";
-                  });
-                } catch (error) {
-                  console.log(error);
-                }
-              }*/
-              (0,_getInfo__WEBPACK_IMPORTED_MODULE_1__.getInfo)();
+              /* async function getInfo() {
+                 try {
+                   const response = await axios.get(
+                     `https://openlibrary.org${book.key}.json`
+                   );
+                     let description = response.data.description;
+                     let infoDiv = createElementHtml(
+                     "div",
+                     "infoDiv",
+                     description === undefined
+                       ? "description not found"
+                       : description.value || description
+                   );
+                   card.appendChild(infoDiv);
+                     //function click for infobutton
+                   infoButton.addEventListener("click", function () {
+                     infoDiv.style.display =
+                       window.getComputedStyle(infoDiv).display == "none"
+                         ? "block"
+                         : "none";
+                   });
+                 } catch (error) {
+                   console.log(error);
+                 }
+               }*/
+              (0,_getInfo__WEBPACK_IMPORTED_MODULE_1__.getInfo)(books);
             }
           } catch (err) {
             _iterator.e(err);
@@ -187,7 +189,7 @@ var getData = /*#__PURE__*/function () {
         case 46:
           _context.prev = 46;
           _context.t0 = _context["catch"](0);
-          alert("Ops! something went wrong");
+          alert("Oops! something went wrong");
           console.log(_context.t0);
         case 50:
         case "end":
@@ -4994,13 +4996,11 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _getInfo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getInfo */ "./src/getInfo.js");
-/* harmony import */ var _getData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./getData */ "./src/getData.js");
-/* harmony import */ var _style_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style/style.css */ "./src/style/style.css");
-
+/* harmony import */ var _getData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getData */ "./src/getData.js");
+/* harmony import */ var _style_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style/style.css */ "./src/style/style.css");
 
 var btn = document.getElementById("button");
-btn.addEventListener("click", _getData__WEBPACK_IMPORTED_MODULE_1__["default"]);
+btn.addEventListener("click", _getData__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 })();
 

@@ -1,6 +1,7 @@
 import axios from "axios";
 //function create element
 import createElementHtml from "./createElementHtml";
+import  getInfo  from "./getInfo";
 //import getInfo from './getInfo'
 
 let list = document.getElementById("results");
@@ -85,7 +86,7 @@ const getData = async () => {
       card.appendChild(infoButton);
       //fetch info
 
-      async function getInfo() {
+     /* async function getInfo() {
         try {
           const response = await axios.get(
             `https://openlibrary.org${book.key}.json`
@@ -112,7 +113,7 @@ const getData = async () => {
         } catch (error) {
           console.log(error);
         }
-      }
+      }*/
       getInfo();
     }
 
