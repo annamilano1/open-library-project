@@ -114,7 +114,7 @@ const getData = async () => {
           console.log(error);
         }
       }*/
-      getInfo();
+      getInfo(book);
     }
 
     return;
