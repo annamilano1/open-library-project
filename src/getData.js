@@ -1,8 +1,7 @@
 import axios from "axios";
-//function create element
+
 import createElementHtml from "./createElementHtml";
-import  getInfo  from "./getInfo";
-//import getInfo from './getInfo'
+import getInfo from "./getInfo";
 
 let list = document.getElementById("results");
 
@@ -84,9 +83,8 @@ const getData = async () => {
       // info button
       const infoButton = createElementHtml("button", "infoButton", "about");
       card.appendChild(infoButton);
-      //fetch info
-
-     
+      
+//fetch info
       getInfo(book, card, infoButton);
     }
 
