@@ -1,5 +1,6 @@
 import axios from "axios";
-async function getInfo() {
+import createElementHtml from "./createElementHtml";
+async function getInfo(book, card, infoButton) {
     try {
       const response = await axios.get(
         `https://openlibrary.org${book.key}.json`
