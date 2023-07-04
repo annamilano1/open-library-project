@@ -1,13 +1,9 @@
 import axios from "axios";
+//function create element
+import createElementHtml from "./createElementHtml";
 
 let list = document.getElementById("results");
-//function create element
-const createElementHtml = (tag, id, content) => {
-  const elem = document.createElement(tag);
-  elem.id = id;
-  elem.innerHTML = content;
-  return elem;
-};
+
 //get API
 const getData = async () => {
   try {
@@ -53,8 +49,6 @@ const getData = async () => {
       return;
     }
 
-    
-
     for (let book of books) {
       //div and card
       const littleDiv = createElementHtml("div", "divPiccolo", "");
@@ -89,6 +83,7 @@ const getData = async () => {
       const infoButton = createElementHtml("button", "infoButton", "about");
       card.appendChild(infoButton);
       //fetch info
+
       async function getInfo() {
         try {
           const response = await axios.get(
@@ -116,14 +111,17 @@ const getData = async () => {
         } catch (error) {
           console.log(error);
         }
-      }
+      } 
       getInfo();
     }
+   
+    //}
 
     return;
   } catch (error) {
-    alert("Ops! something went wrong");
+    alert("Oops! something went wrong");
     console.log(error);
   }
 };
+
 export default getData;
